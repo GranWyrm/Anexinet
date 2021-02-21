@@ -1,3 +1,5 @@
+import java.util.List;
+
 class Main{
     public static void main(String[] args) {
         // Time taken: 20 min
@@ -7,5 +9,11 @@ class Main{
         // Time taken: 20 min
         Palindrome palindrome = new Palindrome("perro");
         System.out.println("is " + palindrome.getString() + " palindrome?\n" + palindrome.isPalindrome());
+
+        Permutations permutations = new Permutations("abc");
+        List<String> perms = permutations.getPermutations();
+        for (String s: perms) {
+            System.out.println(s);
+        }
     }
 }
