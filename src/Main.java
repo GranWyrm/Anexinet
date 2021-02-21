@@ -10,10 +10,15 @@ class Main{
         Palindrome palindrome = new Palindrome("perro");
         System.out.println("is " + palindrome.getString() + " palindrome?\n" + palindrome.isPalindrome());
 
+        // Time taken: 60 min
         Permutations permutations = new Permutations("abc");
         List<String> perms = permutations.getPermutations();
         for (String s: perms) {
             System.out.println(s);
         }
+
+        StringCompressor compressor = new StringCompressor("aabcccccaaa");
+
+        System.out.println(compressor.compress());
     }
 }
