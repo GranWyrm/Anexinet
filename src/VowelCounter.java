@@ -13,8 +13,11 @@ public class VowelCounter {
         this.string = string;
     }
 
-    public int getNumberOfVowels() {
-        int count = 0;
+    /*
+    * This approach is easier to read, take advantage of the behaviour of switch case.
+    * */
+    public long getNumberOfVowels() {
+        long count = 0;
         for (char c : this.string.toCharArray()) {
             switch (c) {
                 case 'a':
