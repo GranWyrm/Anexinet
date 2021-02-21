@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.List;
 
 class Main{
@@ -20,5 +21,28 @@ class Main{
         StringCompressor compressor = new StringCompressor("aabcccccaaa");
 
         System.out.println(compressor.compress());
+
+        int n = 100;
+        System.out.println("First " + n + " of Fibonacci series:");
+        nFibo(n);
+    }
+
+
+    /*
+    * As fibonacci series tends to scalate pretty fast I used BigInt to front all, this approach
+    * is fast but requires more storage
+    * Time taken: 15 min
+    */
+    private static void nFibo(int n) {
+        BigInteger t1 = BigInteger.ZERO;
+        BigInteger t2 = BigInteger.ONE;
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " ");
+
+            BigInteger sum = t1.add(t2);
+            t1 = t2;
+            t2 = sum;
+        }
     }
 }
